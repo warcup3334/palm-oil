@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: url('img/red.jpg'); */
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    padding: 10px 100px;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    border-radius: 6px;
+}
+.logo{
+    font-size: 2em;
+    color: #FFB000;
+    user-select: none;
+    margin-left: 40px;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #FFB000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+   
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #FFB000;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation a:hover::after{
+    transform: scaleX(1);
+}
+
+.btnGoBack{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: solid #FFB000 2px;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #FFB000;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+    
+}
+.btnGoBack:hover{
+    background-color: #FFB000;
+    color: crimson;
+}
+.btnGoBack a{
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #FFB000;
+    font-weight: 500;
+}
+.btnGoBack a:hover{
+    color: crimson;
+}
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: solid 2px rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  
+}
+.wrapper .form-box{
+
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: crimson;
+    font-size: 2em;
+    color: #FFB000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s;
+}
+.icon-close:hover{
+    background: #FFB000;
+    color: crimson;
+}
+.form-box h2{
+    font-size: 2em;
+    color: crimson;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid crimson 2px;
+    margin: 30px 0;
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: crimson;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+    
+}
+.input-box select {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: crimson;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+/* Style the dropdown arrow */
+.input-box select::-ms-expand,
+.input-box select::-webkit-select-arrow {
+    color: crimson; /* Change this color to the desired color for the arrow */
+}
+
+/* Style for Firefox */
+.input-box select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 crimson; /* Change this color to the desired color for the arrow */
+}
+.input-box select:focus ~ label,
+.input-box select:valid ~ label {
+    top: -5px;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: crimson;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: crimson;
+    line-height: 57px;
+}
+
+.input-box-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -40px; /* Add margin to control spacing between input boxes vertically */
+}
+
+.input-box-container .input-box {
+    flex: 1;
+    margin-right: 10px; /* Adjust margin-right for horizontal spacing */
+}
+
+.input-box-container .input-box:last-child {
+    margin-right: 0; /* Remove margin-right for the last input box to prevent extra spacing */
+}
+
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: crimson;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #FFB000;
+    font-weight: 500;
+    transition: .5s;
+}
+.btn:hover{
+    background-color: #FFB000;
+    color: crimson;
+}
+
+.showcase {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	padding: 0 20px;
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
+		center/cover;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.video-container:after {
+	content: '';
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: crimson;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    color: #FFB000;
+    z-index: 99;
+}
+
+.footer-content {
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+}
+.social-media {
+    font-size: 24px;
+    color: #FFB000;  
+    padding: 5px;
+}
+.social-media a {
+    color: #FFB000;
+    text-decoration: none;
+    margin: 0 10px;
+}
